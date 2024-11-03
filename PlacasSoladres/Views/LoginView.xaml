@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlacasSoladres.Views.LoginView"
+             Title="LoginView">
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill" Source="paneles.png"></Image>
+        <Grid ColumnDefinitions="*,*">
+            <Image Source="fondo.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle
+             Margin="-5,-30,-5,-2"
+             CornerRadius="30,30,0,0"
+             Fill="White"/>
+            <VerticalStackLayout HorizontalOptions="Center"
+                              Grid.Row="1">
+                <!--Titulo de bienvenida-->
+                <Label
+                 Text="Bienvenido"
+                 FontSize="Large"
+                 FontAttributes="Bold"
+                 />
+
+                <!--Grid para la seccion de usuario-->
+                <Grid Margin="0,50,0,0"
+                   ColumnDefinitions=".2*,.8*">
+                    <Image Source="usuario.jpg"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    <Entry Placeholder="Ejemplo@gmail.com"
+                        Grid.Column="1"
+                        HeightRequest="60"
+                        x:Name="EntryUsu"/>
+                </Grid>
+
+                <!--Grid para la seccion de contraseña-->
+                <Grid Margin="0,50,0,0"
+                   ColumnDefinitions=".2*,.8*">
+                    <Image Source="contraseya.png"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    <Entry Placeholder="********"
+                        HeightRequest="60"
+                        Grid.Column="1"
+                        IsPassword="True"
+                        x:Name="EntryCon"/>
+                </Grid>
+
+
+                <Grid Margin="80">
+                    <Button x:Name="Logeado"
+                         Text="Iniciar"
+                         WidthRequest="100"
+                         Clicked="botonPresionado"/>
+
+                </Grid>
+
+            </VerticalStackLayout>
+
+
+        </Grid>
+    </Grid>
+</ContentPage>
