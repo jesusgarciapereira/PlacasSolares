@@ -8,8 +8,11 @@
     Title="PlacasSoladres">
 
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate local:LoginView}"
-        Route="MainPage" />
+        Route="LoginView" />
+    
+    <ShellContent
+        ContentTemplate="{DataTemplate local:Citas}"
+        Route="Citas" />
 
 </Shell>

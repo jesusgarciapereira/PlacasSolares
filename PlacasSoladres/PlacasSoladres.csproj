@@ -63,6 +63,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Citas\ClsCitas.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\Citas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -7,7 +7,7 @@ public partial class LoginView : ContentPage
 		InitializeComponent();
 	}
 
-    private void botonPresionado(object obj, EventArgs args)
+    private async void botonPresionado(object obj, EventArgs args)
     {
 
         string correo = EntryUsu.Text;
@@ -16,7 +16,7 @@ public partial class LoginView : ContentPage
         if (string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(contraseya))
         {
 
-
+            await Navigation.PushAsync(new Citas());
 
         }
     }
