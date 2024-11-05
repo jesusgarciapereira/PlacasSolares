@@ -7,7 +7,7 @@
     <ContentPage.BindingContext>
         <viewModel:CitasVM></viewModel:CitasVM>
     </ContentPage.BindingContext>
-
+    <!--Definimos grid, en el cual el 20% de la pantalla es para el titulo y el sobrante para mostrar la lista-->
     <Grid RowDefinitions=".2*,.8*" BackgroundColor="DimGray">
         <Label Text="Bienvenido Daniel"
                FontSize="Large"

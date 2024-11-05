@@ -51,7 +51,7 @@
                         x:Name="EntryCon"/>
                 </Grid>
 
-
+                <!--Boton para iniciar-->
                 <Grid Margin="80">
                     <Button x:Name="Logeado"
                          Text="Iniciar"

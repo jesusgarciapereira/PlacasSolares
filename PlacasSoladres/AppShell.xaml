@@ -15,4 +15,8 @@
         ContentTemplate="{DataTemplate local:Citas}"
         Route="Citas" />
 
+    <ShellContent
+        ContentTemplate="{DataTemplate local:DetallesCitas}"
+        Route="Detalles"/>
+
 </Shell>

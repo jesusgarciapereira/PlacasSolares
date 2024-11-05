@@ -14,8 +14,11 @@ public partial class Citas : ContentPage
 
 	}
 
-	public async void onItemSelecter(object obj, SelectedItemChangedEventArgs select){
+	public async void onItemSelecter(object obj, SelectedItemChangedEventArgs e){
 
-		DisplayAlert("AAAA", "aaaaa", "OK");
+		if (e.SelectedItem is Cita cita)
+		{
+			await Navigation.PushAsync(new DetallesCitas(cita));
+		}
 	}
 }
