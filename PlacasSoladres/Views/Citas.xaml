@@ -8,11 +8,12 @@
         <viewModel:CitasVM></viewModel:CitasVM>
     </ContentPage.BindingContext>
     <!--Definimos grid, en el cual el 20% de la pantalla es para el titulo y el sobrante para mostrar la lista-->
-    <Grid RowDefinitions=".2*,.8*" BackgroundColor="DimGray">
+    <Grid RowDefinitions=".2*,.8*" BackgroundColor="LightSkyBlue">
         <Label Text="Bienvenido Daniel"
                FontSize="Large"
                FontAttributes="Bold"
                VerticalOptions="Center"/>
+        <Image Source="paneles.png" HeightRequest="140" WidthRequest="140" HorizontalOptions="End" Opacity="90"></Image>
         <StackLayout Grid.Row="1">
             <ListView ItemsSource="{Binding listaCita}" ItemSelected="onItemSelecter">
                 <ListView.ItemTemplate>

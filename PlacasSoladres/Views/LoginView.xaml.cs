@@ -7,6 +7,11 @@ public partial class LoginView : ContentPage
 		InitializeComponent();
 	}
 
+    /// <summary>
+    /// Funcion que comprueba si los contenidos estan llenos, si lo estan avanza a la siguiente pagina
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="args"></param>
     private async void botonPresionado(object obj, EventArgs args)
     {
 

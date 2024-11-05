@@ -9,11 +9,15 @@ namespace PlacasSoladres.Models;
 
 public class CitasVM
 {
+    #region Atributos
     public ObservableCollection<Cita> listaCita { get; set; }
-
+    #endregion
+    #region Constructor
     public CitasVM(){
         listaCita = getCitas();
     }
+    #endregion
+    #region Funciones
     public static ObservableCollection<Cita> getCitas(){
 
         ObservableCollection<Cita> lista = new ObservableCollection<Cita> {
@@ -31,4 +35,5 @@ public class CitasVM
 
         return lista;
     }
+    #endregion
 }

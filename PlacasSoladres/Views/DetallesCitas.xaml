@@ -3,12 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlacasSoladres.Views.DetallesCitas"
              Title="DetallesCitas">
-    <HorizontalStackLayout>
 
-        <Label x:Name="lbNombre" Text="{Binding nombre}" FontSize="Large"/>
-        <Label x:Name="lbDireccion" Text="{Binding direccion}" FontSize="Large"/>
-        <Label x:Name="lbTlf" Text="{Binding telefono}" FontSize="Large"/>
+    <VerticalStackLayout Padding="20">
+            <Button Text="Volver" Clicked="botonPresionado" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start"></Button>
+        <HorizontalStackLayout Spacing="40">
+            <Label x:Name="lbNombre" Text="{Binding nombre}" FontSize="Large"/>
+            <Label x:Name="lbDireccion" Text="{Binding direccion}" FontSize="Large"  />
+            <Label x:Name="lbTlf" Text="{Binding telefono}" FontSize="Large"/>
+        </HorizontalStackLayout>
+        <Editor Placeholder="Indique la observacoin del cliente"
+        MaximumHeightRequest="50"
+                MaxLength="400"/>
 
-        <Entry Placeholder="Indique la observacion del cliente"/>
-    </HorizontalStackLayout>
+        
+        <Button Text="Añadir fotos" MaximumHeightRequest="50" MaximumWidthRequest="120" />
+
+        <HorizontalStackLayout>
+            <CheckBox CheckedChanged="aptoONo" HorizontalOptions="End"/>
+            <Label x:Name="labelApto" Text="No apto" FontSize="Medium"
+                HorizontalOptions="End"></Label>
+        </HorizontalStackLayout>
+
+        <Button Text="Guardar" 
+                WidthRequest="120"
+                HeightRequest="50"/>
+    </VerticalStackLayout>
 </ContentPage>
