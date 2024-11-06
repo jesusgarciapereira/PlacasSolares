@@ -4,16 +4,17 @@
              x:Class="PlacasSoladres.Views.DetallesCitas"
              Title="DetallesCitas">
 
-    <VerticalStackLayout Padding="20">
-            <Button Text="Volver" Clicked="botonPresionado" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start"></Button>
+    <VerticalStackLayout Padding="20" BackgroundColor="SkyBlue">
+            <Button Text="Volver" Clicked="botonVolver" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start"></Button>
         <HorizontalStackLayout Spacing="40">
             <Label x:Name="lbNombre" Text="{Binding nombre}" FontSize="Large"/>
             <Label x:Name="lbDireccion" Text="{Binding direccion}" FontSize="Large"  />
             <Label x:Name="lbTlf" Text="{Binding telefono}" FontSize="Large"/>
         </HorizontalStackLayout>
-        <Editor Placeholder="Indique la observacoin del cliente"
+        <Editor Placeholder="Introduzca observación del cliente"
         MaximumHeightRequest="50"
-                MaxLength="400"/>
+                MaxLength="400"
+                BackgroundColor="White"/>
 
         
         <Button Text="Añadir fotos" MaximumHeightRequest="50" MaximumWidthRequest="120" />
@@ -26,6 +27,7 @@
 
         <Button Text="Guardar" 
                 WidthRequest="120"
-                HeightRequest="50"/>
+                HeightRequest="50"
+                Clicked="botonGuardar"/>
     </VerticalStackLayout>
 </ContentPage>

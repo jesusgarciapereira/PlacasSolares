@@ -8,27 +8,27 @@ public partial class LoginView : ContentPage
 	}
 
     /// <summary>
-    /// Funcion que comprueba si los contenidos estan llenos, si lo estan avanza a la siguiente pagina
+    /// Evento asociado al pulsar el boton del LoginView, comprueba si los contenidos estan llenos, si lo estan avanza a la siguiente pagina
     /// </summary>
     /// <param name="obj"></param>
     /// <param name="args"></param>
-    private async void botonPresionado(object obj, EventArgs args)
+    private async void pulsarBoton(object obj, EventArgs args)
     {
 
         string correo = EntryUsu.Text;
-        string contraseya = EntryCon.Text;
+        string contrasennia = EntryCon.Text;
 
-        //Si los campos estan vacios
-        if (string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(contraseya))
+        //Si alguno de los campos esta vacio
+        if (string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(contrasennia))
         {
             //Mostramos una ventana emergente comentado que tiene que rellenar los cambios
-            DisplayAlert("Los campos no pueden estar vacios","Rellena los cambios","Entendido");
+            DisplayAlert("Los campos no pueden estar vacios","Puedes escribir cualquier cosa, es sólo un ejemplo, no hay contraseñas ni nada","Ok");
 
         } 
-        //Si estan rellenados
+        //En caso contrario
         else
         {   
-            //Nos vamos a la vista Citas
+            //Se dirige a la vista Citas
             await Navigation.PushAsync(new Citas());
         }
     }

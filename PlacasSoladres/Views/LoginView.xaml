@@ -4,59 +4,65 @@
              x:Class="PlacasSoladres.Views.LoginView"
              Title="LoginView">
     <Grid RowDefinitions=".3*,.7*">
-        <Image Aspect="AspectFill" Source="paneles.png"></Image>
+        <Image Aspect="AspectFill" Source="placas_solares.jpg"/>
         <Grid ColumnDefinitions="*,*">
-            <Image Source="fondo.png"/>
+            <Image Source="logo_empresa.jpeg"/>
         </Grid>
         <Grid Grid.Row="1">
             <RoundRectangle
              Margin="-5,-30,-5,-2"
              CornerRadius="30,30,0,0"
-             Fill="White"/>
-            <VerticalStackLayout HorizontalOptions="Center"
-                              Grid.Row="1">
-                <!--Titulo de bienvenida-->
+             Fill="SkyBlue"/>
+            <VerticalStackLayout 
+                HorizontalOptions="Center"
+                              Grid.Row="1"
+                >
+                <!--Titulo del login-->
                 <Label
-                 Text="Bienvenido"
+                 Text="Login"
                  FontSize="Large"
                  FontAttributes="Bold"
+                 HorizontalTextAlignment="Center" 
+                    
                  />
 
                 <!--Grid para la seccion de usuario-->
                 <Grid Margin="0,50,0,0"
                    ColumnDefinitions=".2*,.8*">
-                    <Image Source="usuario.jpg"
+                    <Image Source="usuario.png"
                         HeightRequest="40"
                         WidthRequest="40"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"/>
-                    <Entry Placeholder="Ejemplo@gmail.com"
+                    <Entry Placeholder="usuario@gmail.com"
                         Grid.Column="1"
                         HeightRequest="60"
-                        x:Name="EntryUsu"/>
+                        x:Name="EntryUsu"
+                           BackgroundColor="White"/>
                 </Grid>
 
-                <!--Grid para la seccion de contraseña-->
+                <!--Grid para la seccion de contrasenia-->
                 <Grid Margin="0,50,0,0"
                    ColumnDefinitions=".2*,.8*">
-                    <Image Source="contraseya.png"
-                        HeightRequest="40"
-                        WidthRequest="40"
+                    <Image Source="candado.png"
+                        HeightRequest="70"
+                        WidthRequest="70"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"/>
                     <Entry Placeholder="********"
                         HeightRequest="60"
                         Grid.Column="1"
                         IsPassword="True"
-                        x:Name="EntryCon"/>
+                        x:Name="EntryCon"
+                           BackgroundColor="White"/>
                 </Grid>
 
                 <!--Boton para iniciar-->
                 <Grid Margin="80">
                     <Button x:Name="Logeado"
-                         Text="Iniciar"
+                         Text="Acceder"
                          WidthRequest="100"
-                         Clicked="botonPresionado"/>
+                         Clicked="pulsarBoton"/>
 
                 </Grid>
 

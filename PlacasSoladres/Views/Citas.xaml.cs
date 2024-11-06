@@ -6,10 +6,10 @@ namespace PlacasSoladres.Views;
 
 public partial class Citas : ContentPage
 {
-		/// <summary>
-		/// Inicializamos lista con la funcion get Listas
-		/// </summary>
-		public ObservableCollection<Cita> lista = CitasVM.getCitas();
+    /// <summary>
+    /// Inicializamos lista con la funcion obtenerCitas
+    /// </summary>
+    public ObservableCollection<Cita> lista = CitasVM.obtenerCitas();
 		
 	public Citas()
 	{
@@ -18,7 +18,7 @@ public partial class Citas : ContentPage
 	}
 
 	/// <summary>
-	/// Funcion que cuando se selecciona una cita, se va a otra vista con la cita seleccionada
+	/// Evento asociado a seleccionar una cita, se va a otra vista con la cita seleccionada
 	/// </summary>
 	/// <param name="obj"></param>
 	/// <param name="e"></param>

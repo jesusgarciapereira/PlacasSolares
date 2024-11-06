@@ -9,18 +9,20 @@
     </ContentPage.BindingContext>
     <!--Definimos grid, en el cual el 20% de la pantalla es para el titulo y el sobrante para mostrar la lista-->
     <Grid RowDefinitions=".2*,.8*" BackgroundColor="LightSkyBlue">
-        <Label Text="Bienvenido Daniel"
+        <Label Text="Jesús García Pereira"
                FontSize="Large"
                FontAttributes="Bold"
-               VerticalOptions="Center"/>
-        <Image Source="paneles.png" HeightRequest="140" WidthRequest="140" HorizontalOptions="End" Opacity="90"></Image>
+               VerticalOptions="Center"
+               Margin="20,0,0,0"
+               />
+        <Image Source="placas_solares.jpg" HorizontalOptions="End" Opacity="90"></Image>
         <StackLayout Grid.Row="1">
             <ListView ItemsSource="{Binding listaCita}" ItemSelected="onItemSelecter">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Border Stroke="Black"
+                                <Border Stroke="Blue"
                                         StrokeThickness="3"/>
                                 <Label Text="{Binding id,StringFormat='Cita {0}'}" FontSize="24" FontAttributes="Bold"
                                        BackgroundColor="Beige" Padding="20"/>
